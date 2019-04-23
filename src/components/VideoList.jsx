@@ -4,7 +4,7 @@ import VideoListEntry from './VideoListEntry.js';
 
 var VideoList = (props) => {
   return (
-    <div>
+    <div className="video-list">
       {props.videos.map((oneVideo) => <VideoListEntry video={oneVideo} handleClick={props.handleClick}/>)}
     </div>
   );
@@ -12,18 +12,16 @@ var VideoList = (props) => {
 
 
 
-// class VideoList extends React.Component(){
+// class VideoList extends React.Component{
 //   constructor(props){
 //     super(props);
 //   }
 //   render(){
-//   <div className="video-list">
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//   </div>
+//     return (
+//       <div>
+//         {props.videos.map((oneVideo) => <VideoListEntry video={oneVideo} handleClick={props.handleClick}/>)}
+//       </div>
+//     );
 //   }
 // }
 
