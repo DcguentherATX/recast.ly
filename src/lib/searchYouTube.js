@@ -7,7 +7,7 @@ var searchYouTube = (options, callback) => {
   $.get(`https://www.googleapis.com/youtube/v3/search?part=snippet
     &q=${str}
     &type=video
-    &key=${ YOUTUBE_API_KEY }`, null, callback || ((test)=>{console.log(test, "hello from the other side"); }));
+    &key=${ YOUTUBE_API_KEY }`, null, callback || ((test)=>{ console.log(test, 'hello from the other side'); }));
 };
 
 export default searchYouTube;
