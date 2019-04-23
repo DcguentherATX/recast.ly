@@ -1,18 +1,12 @@
 import exampleVideoData from '../data/exampleVideoData.js';
-import videoListEntry from './VideoListEntry.js';
+import VideoListEntry from './VideoListEntry.js';
 
-console.log(exampleVideoData);
 
 var VideoList = (props) => {
-  const videos = props.videos;
-  let listItems = videos.map((video) =>
-    <ListItem key={video.toString()}
-      value={video} />
-  );
   return (
-    <ul>
-      {listItems}
-    </ul>
+    <div>
+      {props.videos.map((oneVideo) => <VideoListEntry video={oneVideo} handleClick={props.handleClick}/>)}
+    </div>
   );
 };
 
